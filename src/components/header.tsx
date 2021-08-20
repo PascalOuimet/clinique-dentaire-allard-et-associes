@@ -13,7 +13,7 @@ import Drawer from "@material-ui/core/Drawer"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import List from "@material-ui/core/List"
-import Logo from "!svg-react-loader!../images/svg/logo.svg"
+import Logo from "../images/svg/logo.svg"
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -25,6 +25,10 @@ const useStyles = makeStyles(() => ({
   },
   toolbarTitle: {
     flexGrow: 1,
+  },
+  toolbarTitleXs: {
+    flexGrow: 1,
+    fontSize:"1rem"
   },
   drawerList: {
     width: 250,
@@ -45,10 +49,14 @@ const Header = () => {
     setOpen(false)
   }
 
+  const smoothScroll = (id:string) => {    
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const navLinks = [
-    { displayText: "Notre équipe", link: "#teamTitle" },
-    { displayText: "Services", link: "#servicesTitle" },
-    { displayText: "Contact", link: "#contactTitle" }
+    { displayText: "Notre équipe", link: "teamTitle" },
+    { displayText: "Services", link: "servicesTitle" },
+    { displayText: "Contact", link: "contactTitle" }
   ]
 
   return (
@@ -66,6 +74,7 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
           </Hidden>
+          <Hidden xsDown>
           <Typography
             variant="h6"
             color="inherit"
@@ -73,10 +82,21 @@ const Header = () => {
           >
             Clinique Dentaire Allard et Associés <Logo style={{width:"20px"}}/>
           </Typography>
+          </Hidden>
+
+          <Hidden smUp>
+          <Typography
+            variant="h6"
+            color="inherit"
+            className={classes.toolbarTitleXs}
+          >
+            Clinique Dentaire Allard et Associés
+          </Typography>
+          </Hidden>
 
           <Hidden xsDown>
             {navLinks.map(item => (
-              <Button color="inherit" key={item.displayText} href={item.link}>
+              <Button color="inherit" key={item.displayText} onClick={() => smoothScroll(item.link)}>
                 {item.displayText}
               </Button>
             ))}
@@ -95,7 +115,7 @@ const Header = () => {
       >
         <List className={classes.drawerList}>
           {navLinks.map((item) => (
-            <ListItem button key={item.displayText}>
+            <ListItem button key={item.displayText} onClick={() => {setOpen(false); setTimeout(() => smoothScroll(item.link), 50);}}>
               <ListItemText primary={item.displayText} />
             </ListItem>
           ))}

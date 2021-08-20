@@ -4,10 +4,18 @@ import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import Image from "./image"
 import Hidden from "@material-ui/core/Hidden"
+import Logo from "../images/svg/logo.svg"
 
 const Hero = () => {
+  const smoothScroll = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <Grid container spacing={3} style={{ minHeight: 500 }}>
+      <Hidden smUp>
+        <Logo style={{ width: "65%", margin: "15px auto 0" }} />
+      </Hidden>
       <Grid
         item={true}
         xs={12}
@@ -20,9 +28,9 @@ const Hero = () => {
       >
 
         <Typography variant="subtitle1" style={{ marginBottom: 30 }}>
-        La clinique dentaire Allard et Associés est un centre dentaire familial et multidisciplinaire. Elle vous offre une gamme de soins dentaires adaptés et personnalisés aux besoins de toute votre famille. Notre équipe met tout en œuvre pour vous accueillir de manière courtoise et chaleureuse, assurer votre confort et votre bien-être et vous prodiguer des soins de qualité.  
+          La clinique dentaire Allard et Associés est un centre dentaire familial et multidisciplinaire. Elle vous offre une gamme de soins dentaires adaptés et personnalisés aux besoins de toute votre famille. Notre équipe met tout en œuvre pour vous accueillir de manière courtoise et chaleureuse, assurer votre confort et votre bien-être et vous prodiguer des soins de qualité.
         </Typography>
-        <Button variant="contained" color="primary" size="large" href="#contactTitle">
+        <Button variant="contained" color="primary" size="large" onClick={() => smoothScroll("contactTitle")}>
           Prendre rendez-vous
         </Button>
       </Grid>

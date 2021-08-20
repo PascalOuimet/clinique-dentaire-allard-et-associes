@@ -1,5 +1,11 @@
 body {
   margin: 0;
+  padding-top:64px
+}
+header{
+  position:fixed!important;
+  top:0;
+  left:0;
 }
 .footer {
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);

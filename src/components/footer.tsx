@@ -43,7 +43,6 @@ const Footer = () => {
             </Typography>
           </Grid>
 
-          <Hidden xsDown>
             <Grid
               item
               xs={12}
@@ -51,6 +50,7 @@ const Footer = () => {
               container
               direction="column"
               justify="space-evenly"
+              style={{ padding: 10 }}
             >
               <Typography variant="h5">
                 Heures d'ouverture
@@ -63,7 +63,6 @@ const Footer = () => {
                 <li>Vendredi : 7 h30 à 15h30</li>
               </ul>
             </Grid>
-          </Hidden>
         </Grid>
       </Box>
       <Box className="attribution">

@@ -30,20 +30,22 @@ const Services = () => {
       >
 
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Prévention" filename="prevent.png" /></td>
-            <td><Typography variant="h6"> Prévention : </Typography>
-              <ul>
-                <li>Examen complet de la bouche (gencives, langue, tissus mous) et des dents</li>
-                <li>Radiographies intraorales et panoramiques</li>
-                <li>Détartrage et polissage </li>
-                <li>Dépistage de problèmes orthodontiques</li>
-                <li>Scellants</li>
-                <li>Protecteur buccal</li>
-                <li>Application de fluor</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Prévention" filename="prevent.png" /></td>
+              <td><Typography variant="h6"> Prévention : </Typography>
+                <ul>
+                  <li>Examen complet de la bouche (gencives, langue, tissus mous) et des dents</li>
+                  <li>Radiographies intraorales et panoramiques</li>
+                  <li>Détartrage et polissage </li>
+                  <li>Dépistage de problèmes orthodontiques</li>
+                  <li>Scellants</li>
+                  <li>Protecteur buccal</li>
+                  <li>Application de fluor</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table>
 
 
@@ -56,17 +58,19 @@ const Services = () => {
         direction="column"
       >
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Restauration" filename="restore.png" /></td>
-            <td>
-              <Typography variant="h6" >Restauration</Typography>
-              <ul>
-                <li>Obturations en composite (blanc) ou en amalgame (gris)</li>
-                <li>Traitements de canal</li>
-                <li>Couronnes</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Restauration" filename="restore.png" /></td>
+              <td>
+                <Typography variant="h6" >Restauration</Typography>
+                <ul>
+                  <li>Obturations en composite (blanc) ou en amalgame (gris)</li>
+                  <li>Traitements de canal</li>
+                  <li>Couronnes</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table></Grid>
       <Grid
         item
@@ -75,17 +79,19 @@ const Services = () => {
         direction="column"
       >
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Esthétique" filename="aesthetic.png" /></td>
-            <td>
-              <Typography variant="h6" >Esthétique</Typography>
-              <ul>
-                <li>Facettes </li>
-                <li>Blanchiment </li>
-                <li>Invisalign</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Esthétique" filename="aesthetic.png" /></td>
+              <td>
+                <Typography variant="h6" >Esthétique</Typography>
+                <ul>
+                  <li>Facettes </li>
+                  <li>Blanchiment </li>
+                  <li>Invisalign</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table>
       </Grid>
       <Grid
@@ -95,17 +101,19 @@ const Services = () => {
         direction="column"
       >
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Fonctionnel" filename="functional.png" /></td>
-            <td>
-              <Typography variant="h6" >Fonctionnel</Typography>
-              <ul>
-                <li>Remplacement de dents manquantes fixe ou amovible</li>
-                <li>Appareil d’expansion palatine</li>
-                <li>Implants</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Fonctionnel" filename="functional.png" /></td>
+              <td>
+                <Typography variant="h6" >Fonctionnel</Typography>
+                <ul>
+                  <li>Remplacement de dents manquantes fixe ou amovible</li>
+                  <li>Appareil d’expansion palatine</li>
+                  <li>Implants</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table>
       </Grid>
       <Grid
@@ -115,17 +123,19 @@ const Services = () => {
         direction="column"
       >
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Chirurgical" filename="chirurgical.png" /></td>
-            <td>
-              <Typography variant="h6" >Chirurgical</Typography>
-              <ul>
-                <li>Frénectomie</li>
-                <li>Extractions</li>
-                <li>Chirurgies mineures</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Chirurgical" filename="chirurgical.png" /></td>
+              <td>
+                <Typography variant="h6" >Chirurgical</Typography>
+                <ul>
+                  <li>Frénectomie</li>
+                  <li>Extractions</li>
+                  <li>Chirurgies mineures</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table>
       </Grid>
       <Grid
@@ -135,17 +145,19 @@ const Services = () => {
         direction="column"
       >
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Parodontie" filename="periodontics.png" /></td>
-            <td>
-              <Typography variant="h6" >Parodontie</Typography>
-              <ul>
-                <li>Surfaçage</li>
-                <li>Curetage gingival</li>
-                <li>Greffes de gencives</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Parodontie" filename="periodontics.png" /></td>
+              <td>
+                <Typography variant="h6" >Parodontie</Typography>
+                <ul>
+                  <li>Surfaçage</li>
+                  <li>Curetage gingival</li>
+                  <li>Greffes de gencives</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table></Grid>
       <Grid
         item
@@ -154,17 +166,19 @@ const Services = () => {
         direction="column"
       >
         <table>
-          <tr>
-            <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Urgence" filename="emergency.png" /></td>
-            <td>
-              <Typography variant="h6" >Urgence</Typography>
-              <ul>
-                <li>Examen et radiographies d’urgence</li>
-                <li>Soulagement de douleurs</li>
-                <li>Restaurations de dents cassées ou obturations tombées</li>
-              </ul></td>
-          </tr>
-
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td style={{ width: "50px", paddingRight: "10px" }} valign="top"><BulletImage alt="Urgence" filename="emergency.png" /></td>
+              <td>
+                <Typography variant="h6" >Urgence</Typography>
+                <ul>
+                  <li>Examen et radiographies d’urgence</li>
+                  <li>Soulagement de douleurs</li>
+                  <li>Restaurations de dents cassées ou obturations tombées</li>
+                </ul></td>
+            </tr>
+          </tbody>
         </table>
       </Grid>
     </Grid>
