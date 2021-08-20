@@ -43,26 +43,28 @@ const Footer = () => {
             </Typography>
           </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              container
-              direction="column"
-              justify="space-evenly"
-              style={{ padding: 10 }}
-            >
-              <Typography variant="h5">
-                Heures d'ouverture
-              </Typography>
-              <ul style={{margin:0, padding:0, listStyleType:"none"}}>
-                <li style={{marginBottom: "10px"}}>Lundi : 7 h30 à 17h30</li>
-                <li style={{marginBottom: "10px"}}>Mardi : 7 h30 à 17h30</li>
-                <li style={{marginBottom: "10px"}}>Mercredi : 7 h30 à 17h30 </li>
-                <li style={{marginBottom: "10px"}}>Jeudi : 11h00 à 19h</li>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            container
+            direction="column"
+            justify="space-evenly"
+            style={{ padding: 10 }}
+          >
+            <Typography variant="h5">
+              Heures d'ouverture
+            </Typography>
+            <Typography variant="body2" color="inherit">
+              <ul style={{ margin: 0, padding: 0, listStyleType: "none" }}>
+                <li style={{ marginBottom: "10px" }}>Lundi : 7 h30 à 17h30</li>
+                <li style={{ marginBottom: "10px" }}>Mardi : 7 h30 à 17h30</li>
+                <li style={{ marginBottom: "10px" }}>Mercredi : 7 h30 à 17h30 </li>
+                <li style={{ marginBottom: "10px" }}>Jeudi : 11h00 à 19h</li>
                 <li>Vendredi : 7 h30 à 15h30</li>
               </ul>
-            </Grid>
+            </Typography>
+          </Grid>
         </Grid>
       </Box>
       <Box className="attribution">
