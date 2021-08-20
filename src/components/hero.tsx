@@ -24,7 +24,7 @@ const Hero = () => {
         direction="column"
         justify="center"
         alignItems="flex-start"
-        style={{ paddingLeft: 40, paddingRight: 40 }}
+        style={{ paddingLeft: 40, paddingRight: 40, paddingBottom:40 }}
       >
 
         <Typography variant="subtitle1" style={{ marginBottom: 30 }}>
