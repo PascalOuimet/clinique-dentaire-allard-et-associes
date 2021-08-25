@@ -16,3 +16,16 @@ header{
   /* background: #2b8bee; */
   padding: 5px;
 }
+
+ul {
+  margin:0;
+  padding:0 0 0 15px;
+}
+
+li {
+  margin:3px 0;
+}
+
+.openHours li{
+  margin:3px 0 10px;
+}
