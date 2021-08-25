@@ -29,3 +29,7 @@ li {
 .openHours li{
   margin:3px 0 10px;
 }
+
+.staff img{
+  border-radius: 10%;
+}

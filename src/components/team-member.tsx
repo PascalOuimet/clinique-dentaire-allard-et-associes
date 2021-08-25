@@ -18,7 +18,7 @@ const TeamMember = ({ member, ...props }: IProps) => {
   return (
     <Card>
       <CardContent style={{ textAlign: "start" }}>
-        <div style={{ width: 80, padding: 10 }}>
+        <div style={{ width: 120, padding: 10 }} className="staff">
           <Image alt={member.title} filename={member.image} />
         </div>
         <Typography variant="h6" color="inherit">

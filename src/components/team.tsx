@@ -22,14 +22,14 @@ const Team = () => {
     },
     {
       id: 3,
-      image: "tracking-icon.png",
+      image: "staff/france.jpg",
       title: "France Tourigny",
       description:
         "hygiéniste dentaire",
     },
     {
       id: 4,
-      image: "tracking-icon.png",
+      image: "staff/cynthia.jpg",
       title: "Cynthia Borris",
       description:
         "hygiéniste dentaire",
@@ -43,13 +43,13 @@ const Team = () => {
     },
     {
       id: 6,
-      image: "tracking-icon.png",
+      image: "staff/marie_caza.jpg",
       title: "Marie Caza",
       description: "hygiéniste dentaire",
     },
     {
       id: 7,
-      image: "tracking-icon.png",
+      image: "staff/emilie.jpg",
       title: "Émilie Robert",
       description: "assistante dentaire",
     },
@@ -67,7 +67,7 @@ const Team = () => {
     },
     {
       id: 10,
-      image: "tracking-icon.png",
+      image: "staff/nathalie.jpg",
       title: "Nathalie Brunet",
       description: "secrétaire dentaire",
     },
