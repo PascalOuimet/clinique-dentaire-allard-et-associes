@@ -8,14 +8,14 @@ const Team = () => {
   let services = [
     {
       id: 1,
-      image: "tracking-icon.png",
+      image: "staff/bruno.jpg",
       title: "Dr Bruno Allard",
       description:
         "chirurgien-dentiste ",
     },
     {
       id: 2,
-      image: "tracking-icon.png",
+      image: "staff/marie_andree.jpg",
       title: "Dre Marie-Andrée Leduc",
       description:
         "chirurgienne-dentiste ",
@@ -36,7 +36,7 @@ const Team = () => {
     },
     {
       id: 5,
-      image: "tracking-icon.png",
+      image: "staff/carolane.jpg",
       title: "Carolane Gagné",
       description:
         "hygiéniste dentaire",
@@ -61,7 +61,7 @@ const Team = () => {
     },
     {
       id: 9,
-      image: "tracking-icon.png",
+      image: "staff/josee_anne.jpg",
       title: "Josée-Anne Leboeuf",
       description: "assistante dentaire",
     },
@@ -73,7 +73,7 @@ const Team = () => {
     },
     {
       id: 11,
-      image: "tracking-icon.png",
+      image: "staff/rebecca.jpg",
       title: "Rebecca Miclette",
       description: "secrétaire dentaire",
     }
