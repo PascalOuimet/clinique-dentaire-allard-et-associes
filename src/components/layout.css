@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  padding-top:64px;
-  background: #bbb;
+  padding-top:64px
 }
 header{
   position:fixed!important;
@@ -9,12 +8,12 @@ header{
   left:0;
 }
 .footer {
-  background: linear-gradient(180deg, #bbb 28%, #fff 136%);
-  padding-bottom:40px;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
 }
 
 .attribution {
-  background: #81B0C5;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 100%);
+  /* background: #2b8bee; */
   padding: 5px;
 }
 
@@ -31,32 +30,6 @@ li {
   margin:3px 0 10px;
 }
 
-.staff{
-  margin:auto;
-}
-
-.table{
-  background: #81B0C5; 
-  margin-bottom:20px;
-  font-weight:bold;
-}
-
-.table .svg{
-  position:absolute;
-  left:0;
-  top:0;
-  z-index:-1;
-  width:100%;
-  height:100%;
-}
-
-.table .content{
-  z-index:2;
-  padding:40px 20px;
-  position:relative;
-  
-}
-
-.content h6{
-  font-weight:bold!important;
+.staff img{
+  border-radius: 10%;
 }

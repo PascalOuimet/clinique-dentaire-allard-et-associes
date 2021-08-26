@@ -34,10 +34,9 @@ const Layout = ({ children }: Props) => {
       <Header />
       <Box
         style={{
-          margin: `50px auto 0`,
-          background:"white",
+          margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.99rem`,
+          padding: `0 1.0875rem 1.45rem`,
         }}
       >
         {children}

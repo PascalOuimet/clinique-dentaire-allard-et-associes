@@ -10,7 +10,7 @@ const theme = createMuiTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#0079A7",
+      main: "#458FF6",
     },
     error: {
       main: red.A400,
@@ -26,7 +26,7 @@ const theme = createMuiTheme({
     },
   },
   shape: {
-    borderRadius: 0,
+    borderRadius: 20,
   },
 })
 

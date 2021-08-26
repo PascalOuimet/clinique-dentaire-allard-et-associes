@@ -2,6 +2,7 @@ import React from "react"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Box from "@material-ui/core/Box"
+import Hidden from "@material-ui/core/Hidden"
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
             margin: `0 auto`,
             maxWidth: 960,
             minHeight: 250,
-            color: "black",
+            color: "#FFF",
           }}
         >
           <Grid
@@ -32,13 +33,13 @@ const Footer = () => {
               85 Notre-Dame suite 1, Salaberry-de-Valleyfield, J6S1E7
             </Typography>
             <Typography variant="body2" color="inherit">
-              Téléphone <a href="tel:4503717571" style={{ color: "black" }}>450 371-7571</a>
+              Téléphone <a href="tel:4503717571" style={{ color: "white" }}>450 371-7571</a>
             </Typography>
             <Typography variant="body2" color="inherit">
               Fax 450 371 8122
             </Typography>
             <Typography variant="body2" color="inherit">
-              <a href="mailto:info@cliniqueallardleduc.com" style={{ color: "black" }}>info@cliniqueallardleduc.com</a>
+              <a href="mailto:info@cliniqueallardleduc.com" style={{ color: "white" }}>info@cliniqueallardleduc.com</a>
             </Typography>
           </Grid>
 
@@ -54,13 +55,15 @@ const Footer = () => {
             <Typography variant="h5">
               Heures d'ouverture
             </Typography>
-            <ul style={{ margin: 0, padding: 0, listStyleType: "none" }} className="openHours">
-              <li>Lundi : 7 h30 à 17h30</li>
-              <li>Mardi : 7 h30 à 17h30</li>
-              <li>Mercredi : 7 h30 à 17h30 </li>
-              <li>Jeudi : 11h00 à 19h</li>
-              <li>Vendredi : 7 h30 à 15h30</li>
-            </ul>
+            <Typography variant="body2" color="inherit">
+              <ul style={{ margin: 0, padding: 0, listStyleType: "none" }} className="openHours">
+                <li>Lundi : 7 h30 à 17h30</li>
+                <li>Mardi : 7 h30 à 17h30</li>
+                <li>Mercredi : 7 h30 à 17h30 </li>
+                <li>Jeudi : 11h00 à 19h</li>
+                <li>Vendredi : 7 h30 à 15h30</li>
+              </ul>
+            </Typography>
           </Grid>
         </Grid>
       </Box>

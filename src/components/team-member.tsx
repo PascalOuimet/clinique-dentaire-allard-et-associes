@@ -15,12 +15,10 @@ interface Team {
 }
 
 const TeamMember = ({ member, ...props }: IProps) => {
-  const isImgVisible = member.image.length > 0 ? "visible" : "hidden";
-
   return (
     <Card>
-      <CardContent style={{ textAlign: "center", backgroundColor: "#dfdfdf" }}>
-        <div style={{ width: 120, padding: 10, visibility: isImgVisible }} className="staff">
+      <CardContent style={{ textAlign: "start" }}>
+        <div style={{ width: 120, padding: 10 }} className="staff">
           <Image alt={member.title} filename={member.image} />
         </div>
         <Typography variant="h6" color="inherit">

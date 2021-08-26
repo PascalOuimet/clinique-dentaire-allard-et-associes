@@ -27,10 +27,10 @@ const Hero = () => {
         style={{ paddingLeft: 40, paddingRight: 40, paddingBottom:40 }}
       >
 
-        <Typography variant="subtitle1" style={{ marginBottom: 30, fontWeight:"bold", textAlign:"center" }}>
+        <Typography variant="subtitle1" style={{ marginBottom: 30 }}>
           La clinique dentaire Allard et Associés est un centre dentaire familial et multidisciplinaire. Elle vous offre une gamme de soins dentaires adaptés et personnalisés aux besoins de toute votre famille. Notre équipe met tout en œuvre pour vous accueillir de manière courtoise et chaleureuse, assurer votre confort et votre bien-être et vous prodiguer des soins de qualité.
         </Typography>
-        <Button variant="contained" color="primary" size="large" style={{color:"white", margin: "0 auto"}} onClick={() => smoothScroll("contactTitle")}>
+        <Button variant="contained" color="primary" size="large" onClick={() => smoothScroll("contactTitle")}>
           Prendre rendez-vous
         </Button>
       </Grid>
@@ -45,7 +45,7 @@ const Hero = () => {
           style={{ padding: 10 }}
         >
           <div style={{ width: "100%" }}>
-            <Image alt="Virtual Healthcare for you" filename="hero-image.jpg" />
+            <Image alt="Virtual Healthcare for you" filename="hero-image.png" />
           </div>
         </Grid>
       </Hidden>
