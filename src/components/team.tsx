@@ -49,32 +49,26 @@ const Team = () => {
     },
     {
       id: 7,
-      image: "staff/emilie.jpg",
-      title: "Émilie Robert",
-      description: "assistante dentaire",
-    },
-    {
-      id: 8,
       image: "tracking-icon.png",
       title: "Karolyne Pâquet",
       description: "assistante dentaire",
     },
     {
-      id: 9,
+      id: 8,
       image: "staff/josee_anne.jpg",
       title: "Josée-Anne Leboeuf",
       description: "assistante dentaire",
     },
     {
-      id: 10,
+      id: 9,
       image: "staff/nathalie.jpg",
       title: "Nathalie Brunet",
       description: "secrétaire dentaire",
     },
     {
-      id: 11,
-      image: "staff/rebecca.jpg",
-      title: "Rebecca Miclette",
+      id: 10,
+      image: "tracking-icon.png",
+      title: "Marianne Di Santi",
       description: "secrétaire dentaire",
     }
   ]
