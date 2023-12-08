@@ -68,7 +68,7 @@ const Team = () => {
     {
       id: 10,
       image: "tracking-icon.png",
-      title: "Marianne Di Santi",
+      title: "Audrey Desaulniers",
       description: "secrétaire dentaire",
     }
   ]
