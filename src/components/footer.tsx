@@ -57,11 +57,11 @@ const Footer = () => {
             </Typography>
             <Typography variant="body2" color="inherit">
               <ul style={{ margin: 0, padding: 0, listStyleType: "none" }} className="openHours">
-                <li>Lundi : 7 h30 à 17h00</li>
-                <li>Mardi : 7 h30 à 17h00</li>
-                <li>Mercredi : 7 h30 à 17h00 </li>
-                <li>Jeudi : 7 h30 à 15h00</li>
-                <li>Vendredi : 7 h30 à 14h00</li>
+                <li>Lundi : 7h30 à 17h00</li>
+                <li>Mardi : 7h30 à 17h00</li>
+                <li>Mercredi : 7h30 à 17h00 </li>
+                <li>Jeudi : 7h30 à 15h00</li>
+                <li>Vendredi : 7h30 à 14h00</li>
               </ul>
             </Typography>
           </Grid>
