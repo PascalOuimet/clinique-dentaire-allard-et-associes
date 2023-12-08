@@ -39,7 +39,7 @@ const Footer = () => {
               Fax 450 371 8122
             </Typography>
             <Typography variant="body2" color="inherit">
-              <a href="mailto:info@cliniqueallardleduc.com" style={{ color: "white" }}>info@cliniqueallardleduc.com</a>
+              <a href="mailto:info@dentisteallard.com" style={{ color: "white" }}>info@dentisteallard.com</a>
             </Typography>
           </Grid>
 
