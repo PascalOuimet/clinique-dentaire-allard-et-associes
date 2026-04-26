@@ -1,34 +1,38 @@
 import React from "react"
-import Card from "@material-ui/core/Card"
-import CardContent from "@material-ui/core/CardContent"
-import Typography from "@material-ui/core/Typography"
 import Image from "./image"
 
-interface IProps {
-  member: Team
+interface TeamMemberProps {
+  member: TeamMemberData
 }
 
-interface Team {
+interface TeamMemberData {
   title: string
   image: string
   description: string
 }
 
-const TeamMember = ({ member, ...props }: IProps) => {
+const TeamMember = ({ member }: TeamMemberProps) => {
+  const isPlaceholder = member.image.includes("tracking-icon")
+
   return (
-    <Card>
-      <CardContent style={{ textAlign: "start" }}>
-        <div style={{ width: 120, padding: 10 }} className="staff">
-          <Image alt={member.title} filename={member.image} />
-        </div>
-        <Typography variant="h6" color="inherit">
-          {member.title}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {member.description}
-        </Typography>
-      </CardContent>
-    </Card>
+    <article className="teamCard">
+      <div
+        className={`teamPhoto${isPlaceholder ? " teamPhoto--placeholder" : ""}`}
+      >
+        <Image
+          alt={member.title}
+          filename={member.image}
+          objectFit={isPlaceholder ? "contain" : "cover"}
+          objectPosition="center center"
+          variant={isPlaceholder ? "icon" : "avatar"}
+        />
+      </div>
+      <div>
+        <h3 className="teamName">{member.title}</h3>
+        <p className="teamRole">{member.description}</p>
+      </div>
+    </article>
   )
 }
+
 export default TeamMember

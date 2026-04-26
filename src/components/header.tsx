@@ -1,136 +1,131 @@
-import PropTypes from "prop-types"
 import React from "react"
 
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
-import { makeStyles } from "@material-ui/core/styles"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
-import Hidden from "@material-ui/core/Hidden"
-import Drawer from "@material-ui/core/Drawer"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemText from "@material-ui/core/ListItemText"
-import List from "@material-ui/core/List"
 import Logo from "../images/svg/logo.svg"
 
-const useStyles = makeStyles(() => ({
-  appBar: {
-    color: "#233348",
-    backgroundColor: "#FFF",
-  },
-  toolbar: {
-    flexWrap: "wrap",
-  },
-  toolbarTitle: {
-    flexGrow: 1,
-  },
-  toolbarTitleXs: {
-    flexGrow: 1,
-    fontSize:"1rem"
-  },
-  drawerList: {
-    width: 250,
-  },
-  drawerToggle: {
-    padding: 20,
-  },
-}))
+const navLinks = [
+  { displayText: "Notre équipe", link: "teamTitle" },
+  { displayText: "Services", link: "servicesTitle" },
+  { displayText: "Contact", link: "contactTitle" },
+]
 
 const Header = () => {
-  const classes = useStyles()
   const [open, setOpen] = React.useState(false)
 
-  const handleDrawerOpen = () => {
-    setOpen(true)
+  React.useEffect(() => {
+    if (!open) {
+      return undefined
+    }
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false)
+      }
+    }
+
+    document.body.classList.add("hasDrawer")
+    window.addEventListener("keydown", closeOnEscape)
+
+    return () => {
+      document.body.classList.remove("hasDrawer")
+      window.removeEventListener("keydown", closeOnEscape)
+    }
+  }, [open])
+
+  const smoothScroll = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
   }
-  const handleDrawerClose = () => {
+
+  const navigateTo = (id: string) => {
     setOpen(false)
+    setTimeout(() => smoothScroll(id), 80)
   }
-
-  const smoothScroll = (id:string) => {    
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const navLinks = [
-    { displayText: "Notre équipe", link: "teamTitle" },
-    { displayText: "Services", link: "servicesTitle" },
-    { displayText: "Contact", link: "contactTitle" }
-  ]
 
   return (
     <React.Fragment>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
-          <Hidden smUp>
-            <IconButton
-              className={classes.drawerToggle}
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-          <Hidden xsDown>
-          <Typography
-            variant="h6"
-            color="inherit"
-            className={classes.toolbarTitle}
+      <header className="siteHeader">
+        <div className="siteHeader__toolbar">
+          <button
+            type="button"
+            className="siteHeader__brand"
+            onClick={() => smoothScroll("top")}
           >
-            Clinique Dentaire Allard et Associés <Logo style={{width:"20px"}}/>
-          </Typography>
-          </Hidden>
+            <Logo className="siteHeader__logo" aria-hidden="true" />
+            <span className="siteHeader__title">
+              Clinique Dentaire Allard et Associés
+            </span>
+          </button>
 
-          <Hidden smUp>
-          <Typography
-            variant="h6"
-            color="inherit"
-            className={classes.toolbarTitleXs}
-          >
-            Clinique Dentaire Allard et Associés
-          </Typography>
-          </Hidden>
-
-          <Hidden xsDown>
+          <nav className="siteHeader__nav" aria-label="Navigation principale">
             {navLinks.map(item => (
-              <Button color="inherit" key={item.displayText} onClick={() => smoothScroll(item.link)}>
+              <button
+                className="siteHeader__navButton"
+                key={item.displayText}
+                type="button"
+                onClick={() => smoothScroll(item.link)}
+              >
                 {item.displayText}
-              </Button>
+              </button>
             ))}
-          </Hidden>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="temporary"
-        anchor="left"
-        open={open}
-        onEscapeKeyDown={handleDrawerClose}
-        onBackdropClick={handleDrawerClose}
-        ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
-        }}
+            <button
+              className="buttonLike buttonLike--primary siteHeader__cta"
+              type="button"
+              onClick={() => smoothScroll("contactTitle")}
+            >
+              Prendre rendez-vous
+            </button>
+          </nav>
+
+          <button
+            className="siteHeader__menuButton"
+            type="button"
+            aria-label="Ouvrir la navigation"
+            aria-expanded={open}
+            onClick={() => setOpen(true)}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </button>
+        </div>
+      </header>
+
+      <div
+        className={`mobileDrawerOverlay${open ? " isOpen" : ""}`}
+        aria-hidden={!open}
+        onClick={() => setOpen(false)}
       >
-        <List className={classes.drawerList}>
-          {navLinks.map((item) => (
-            <ListItem button key={item.displayText} onClick={() => {setOpen(false); setTimeout(() => smoothScroll(item.link), 50);}}>
-              <ListItemText primary={item.displayText} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+        <aside
+          className="mobileDrawer"
+          aria-label="Navigation mobile"
+          onClick={event => event.stopPropagation()}
+        >
+          <div className="mobileDrawer__brand">
+            <Logo className="siteHeader__logo" aria-hidden="true" />
+            <span>Clinique Dentaire Allard et Associés</span>
+          </div>
+          <nav className="mobileDrawer__nav">
+            {navLinks.map(item => (
+              <button
+                className="mobileDrawer__item"
+                key={item.displayText}
+                type="button"
+                onClick={() => navigateTo(item.link)}
+              >
+                {item.displayText}
+              </button>
+            ))}
+          </nav>
+          <button
+            className="buttonLike buttonLike--primary mobileDrawer__cta"
+            type="button"
+            onClick={() => navigateTo("contactTitle")}
+          >
+            Prendre rendez-vous
+          </button>
+        </aside>
+      </div>
     </React.Fragment>
   )
-}
-
-Header.propTypes = {
-  companyName: PropTypes.string,
-}
-
-Header.defaultProps = {
-  companyName: `Clinique Dentaire Allard et Associés`,
 }
 
 export default Header

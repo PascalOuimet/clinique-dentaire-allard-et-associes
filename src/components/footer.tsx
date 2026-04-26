@@ -1,109 +1,91 @@
 import React from "react"
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography"
-import Box from "@material-ui/core/Box"
-import Hidden from "@material-ui/core/Hidden"
+import { useMapsUrl } from "../utils/maps"
 
 const Footer = () => {
+  const mapsUrl = useMapsUrl()
+
   return (
     <React.Fragment>
-      <Box className="footer">
-        <Grid
-          container
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            minHeight: 250,
-            color: "#FFF",
-          }}
-        >
-          <Grid
-            xs={12}
-            sm={6}
-            item
-            container
-            direction="column"
-            justify="space-evenly"
-            style={{ padding: 10 }}
-          >
-            <Typography variant="h4" color="inherit" id="contactTitle">
+      <footer className="footer" aria-labelledby="contactTitle">
+        <div className="footerInner">
+          <section>
+            <h2 className="footerTitle" id="contactTitle">
               Contact
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              85 Notre-Dame suite 1, Salaberry-de-Valleyfield, J6S1E7
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              Téléphone <a href="tel:4503717571" style={{ color: "white" }}>450 371-7571</a>
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              Fax 450 371 8122
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              <a href="mailto:info@dentisteallard.com" style={{ color: "white" }}>info@dentisteallard.com</a>
-            </Typography>
-          </Grid>
+            </h2>
+            <p className="footerText">
+              <a
+                className="footerAddress"
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                85 Notre-Dame suite 1, Salaberry-de-Valleyfield, J6S1E7
+              </a>
+            </p>
+            <div className="footerLinks">
+              <a className="footerLink" href="tel:4503717571">
+                Téléphone 450 371-7571
+              </a>
+              <a className="footerLink" href="mailto:info@dentisteallard.com">
+                info@dentisteallard.com
+              </a>
+              <span className="footerLink">Fax 450 371-8122</span>
+            </div>
+          </section>
 
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            container
-            direction="column"
-            justify="space-evenly"
-            style={{ padding: 10 }}
-          >
-            <Typography variant="h5">
-              Heures d'ouverture
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              <ul style={{ margin: 0, padding: 0, listStyleType: "none" }} className="openHours">
-                <li>Lundi : 7h30 à 17h00</li>
-                <li>Mardi : 7h30 à 17h00</li>
-                <li>Mercredi : 7h30 à 17h00 </li>
-                <li>Jeudi : 7h30 à 15h00</li>
-                <li>Vendredi : 7h30 à 14h00</li>
-              </ul>
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
-      <Box className="attribution">
-        <Grid
-          container
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            color: "#FFF",
-            paddingLeft: 5,
-            paddingRight: 5,
-          }}
-          direction="row"
-          justify="space-between"
-          alignItems="center"
-        >
-          <Typography variant="body2" color="inherit">
+          <section>
+            <h2 className="footerTitle footerSubtitle">Heures d'ouverture</h2>
+            <ul className="openHours">
+              <li>
+                <span>Lundi</span>
+                <strong>7h30 à 17h00</strong>
+              </li>
+              <li>
+                <span>Mardi</span>
+                <strong>7h30 à 17h00</strong>
+              </li>
+              <li>
+                <span>Mercredi</span>
+                <strong>7h30 à 17h00</strong>
+              </li>
+              <li>
+                <span>Jeudi</span>
+                <strong>7h30 à 15h00</strong>
+              </li>
+              <li>
+                <span>Vendredi</span>
+                <strong>7h30 à 14h00</strong>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </footer>
+      <div className="attribution">
+        <div className="attributionInner">
+          <p>
             Ordre des dentistes du Québec{" "}
             <a
-              href="https://www.maboucheensante.com/"
+              href="https://www.odq.qc.ca/"
               target="_blank"
-              style={{ color: "#FFF" }}
+              rel="noopener noreferrer"
             >
               ODQ
             </a>
-          </Typography>
-          <Typography variant="body2" color="inherit">
+          </p>
+          <p>
             Ordre des hygiénistes dentaires du Québec{" "}
             <a
               href="https://ohdq.com/public/lordre/"
               target="_blank"
-              style={{ color: "#FFF", margin: 5 }}
+              rel="noopener noreferrer"
             >
               OHDQ
             </a>
-          </Typography>
-        </Grid>
-      </Box>
-    </React.Fragment >
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   )
 }
+
 export default Footer

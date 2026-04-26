@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Clinique Dentaire Allard et Associés`,
-    description: `Centre dentaire familial et multidisciplinaire.`,
-    author: `Pascal Ouimet`,
+    description: `Centre dentaire familial et multidisciplinaire à Salaberry-de-Valleyfield.`,
+    siteUrl: process.env.SITE_URL || `https://dentisteallard.com`,
+    author: `Clinique Dentaire Allard et Associés`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,29 +13,37 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          placeholder: `blurred`,
+          quality: 82,
+          breakpoints: [390, 768, 1180, 1366],
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Clinique Dentaire Allard et Associés`,
+        short_name: `Dentiste Allard`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#f6faf9`,
+        theme_color: `#0b7a82`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`,
       },
     },
-    `gatsby-plugin-material-ui`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {
-        include: /svg/
-      }
-    }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+        include: /svg/,
+      },
+    },
   ],
 }

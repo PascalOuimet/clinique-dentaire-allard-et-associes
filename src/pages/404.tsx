@@ -5,9 +5,12 @@ import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>PAGE INTROUVABLE</h1>
+    <section className="section">
+      <h1>Page introuvable</h1>
+    </section>
   </Layout>
 )
+
+export const Head = () => <SEO title="404: Page introuvable" pathname="/404/" />
 
 export default NotFoundPage
