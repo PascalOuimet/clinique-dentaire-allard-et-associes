@@ -4,6 +4,11 @@
   "description": "Clinique Dentaire Allard et Associés",
   "version": "0.1.0",
   "author": "Pascal Ouimet",
+  "packageManager": "yarn@1.22.5",
+  "engines": {
+    "node": "20.x",
+    "yarn": "1.22.x"
+  },
   "dependencies": {
     "gatsby": "^5.16.1",
     "gatsby-plugin-image": "^3.16.0",
