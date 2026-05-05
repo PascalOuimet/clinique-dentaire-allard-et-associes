@@ -449,57 +449,6 @@ li {
   background: linear-gradient(90deg, var(--teal), var(--coral));
 }
 
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.teamCard {
-  display: flex;
-  align-items: center;
-  min-height: 132px;
-  height: 100%;
-  padding: 18px;
-  gap: 15px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 16px 44px rgba(18, 49, 56, 0.07);
-}
-
-.teamPhoto {
-  width: 78px;
-  height: 78px;
-  flex: 0 0 78px;
-  overflow: hidden;
-  border: 3px solid #fff;
-  border-radius: 8px;
-  background: var(--teal-soft);
-  box-shadow: 0 12px 30px rgba(13, 63, 70, 0.12);
-}
-
-.teamPhoto .gatsby-image-wrapper {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.teamPhoto--placeholder {
-  padding: 18px;
-}
-
-.teamName {
-  margin-bottom: 2px;
-  font-size: 1.02rem;
-  line-height: 1.24;
-}
-
-.teamRole {
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
 .servicesSection {
   padding-top: clamp(56px, 8vw, 96px);
 }
@@ -680,10 +629,6 @@ li {
     min-height: 0;
   }
 
-  .teamGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .serviceGrid,
   .footerInner {
     grid-template-columns: 1fr;
@@ -766,14 +711,6 @@ li {
     font-size: 0.92rem;
     line-height: 1.35;
     overflow-wrap: anywhere;
-  }
-
-  .teamGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .teamCard {
-    padding: 15px;
   }
 
   .serviceCard {

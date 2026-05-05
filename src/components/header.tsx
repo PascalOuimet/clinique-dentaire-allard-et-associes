@@ -3,7 +3,6 @@ import React from "react"
 import Logo from "../images/svg/logo.svg"
 
 const navLinks = [
-  { displayText: "Notre équipe", link: "teamTitle" },
   { displayText: "Services", link: "servicesTitle" },
   { displayText: "Contact", link: "contactTitle" },
 ]
