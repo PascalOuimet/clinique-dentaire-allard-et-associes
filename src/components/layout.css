@@ -609,6 +609,73 @@ li {
   font-weight: 800;
 }
 
+.attributionLinkButton {
+  border: 0;
+  padding: 0;
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(6, 39, 44, 0.68);
+}
+
+.modalCard {
+  width: min(100%, 760px);
+  max-height: min(88vh, 820px);
+  overflow-y: auto;
+  padding: 28px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(5, 29, 33, 0.28);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.modalCloseButton {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.modalBody p:last-child {
+  margin-bottom: 0;
+}
+
+.modalBody a {
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
 @media (max-width: 960px) {
   body {
     padding-top: 72px;
@@ -731,5 +798,13 @@ li {
   .openHours span,
   .openHours strong {
     display: block;
+  }
+
+  .modalOverlay {
+    padding: 16px;
+  }
+
+  .modalCard {
+    padding: 22px 18px;
   }
 }
